@@ -1,12 +1,7 @@
-import { ListaNegociacoes } from "../models/lista-negociacoes.js";
+import { ListaNegociacoes } from "../models/lista-negociacoes";
+import { View } from "./view.js";
 
-export class NegociacoesView {
-
-  private elem: HTMLElement;
-
-  constructor(seletor: string) {
-    this.elem = document.querySelector(seletor);
-  }
+export class NegociacoesView extends View<ListaNegociacoes> {
 
   template(model: ListaNegociacoes): string {
     console.log(model)
@@ -29,15 +24,11 @@ export class NegociacoesView {
                   <td>${item.valor}</td>
                 </tr>
               `
-            }).join('\n')
+            }).join('')
           }
         </tbody>
       </table>
     `;
   }
 
-  update(model: ListaNegociacoes): void {
-    const template = this.template(model);
-    this.elem.innerHTML = template;
-  }
 }
