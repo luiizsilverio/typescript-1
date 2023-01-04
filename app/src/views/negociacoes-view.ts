@@ -4,7 +4,6 @@ import { View } from "./view.js";
 export class NegociacoesView extends View<ListaNegociacoes> {
 
   protected template(model: ListaNegociacoes): string {
-    console.log(model)
     return `
       <table class="table table-hover table-bordered">
         <thead>
