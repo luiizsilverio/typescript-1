@@ -50,6 +50,13 @@ export class NegociacaoController {
         this.negociacoesService
             .obterNegociacoesAPI()
             .then(negociacoes => {
+            return negociacoes.filter(negociacao => {
+                return !this.negociacoes
+                    .lista()
+                    .some(neg => neg.ehIgual(negociacao));
+            });
+        })
+            .then(negociacoes => {
             for (let negociacao of negociacoes) {
                 this.negociacoes.adiciona(negociacao);
             }

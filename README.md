@@ -1,6 +1,6 @@
 # TS-NEGOCIACOES
 
-Aplicação desenvolvida durante o curso de Typescript <a href="https://cursos.alura.com.br/course/typescript-evoluindo-javascript">parte-1</a> e <a href="https://cursos.alura.com.br/course/typescript-avancando-linguagem">parte-2</a>, da Alura.
+Aplicação desenvolvida durante o curso de Typescript <a href="https://cursos.alura.com.br/course/typescript-evoluindo-javascript">parte 1</a>, <a href="https://cursos.alura.com.br/course/typescript-avancando-linguagem">parte 2</a> e <a href="https://cursos.alura.com.br/course/typescript-tecnicas-boas-praticas">parte 3, da Alura.
 <br/>
 
 ## 🚀 Tecnologias
