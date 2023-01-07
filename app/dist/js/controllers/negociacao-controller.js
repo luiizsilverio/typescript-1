@@ -13,6 +13,7 @@ import { logarTempoExecucao } from "../decorators/logar-tempo-execucao.js";
 import { inspect } from "../decorators/inspect.js";
 import { domInjector } from "../decorators/dom-injector.js";
 import { NegociacoesService } from "../services/negociacoes-service.js";
+import { imprimir } from "../utils/imprimir.js";
 export class NegociacaoController {
     constructor() {
         this.negociacoes = new ListaNegociacoes();
@@ -27,6 +28,7 @@ export class NegociacaoController {
             this.mensagemView.update('Apenas negociações em dias úteis são aceitas.');
             return;
         }
+        imprimir(negociacao);
         this.negociacoes.adiciona(negociacao);
         this.atualizaView();
         this.limpaFormulario();

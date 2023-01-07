@@ -22,7 +22,7 @@ export class NegociacoesView extends View<ListaNegociacoes> {
                 <tr>
                   <td>${this.formatar(item.data)}</td>
                   <td>${item.quantidade}</td>
-                  <td>${item.valor}</td>
+                  <td>${item.valor.toFixed(2)}</td>
                 </tr>
               `
             }).join('')
